@@ -1,3 +1,14 @@
+<?php
+session_start();
+	if ($_SESSION['loggin']) {
+		$user = $_SESSION['username'];
+		$score = $_SESSION['score'];
+	} else {
+		header("Location: pleaseSignup.html");
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
